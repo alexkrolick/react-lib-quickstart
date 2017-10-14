@@ -8,6 +8,8 @@ Get started building React libraries, quickly.
 - Edit package.json
   - Change `name` to your library's NPM name
   - Update `author`, `license`, `description`, and `repository`
+  
+_Note: This is for libraries, not for apps! If you are bootstrapping an app check out [create-react-app](https://github.com/facebookincubator/create-react-app)_.
 
 ## What is included
 
