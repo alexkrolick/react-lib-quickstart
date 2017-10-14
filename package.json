@@ -1,0 +1,60 @@
+{
+  "name": "react-library",
+  "author": "Alex Krolick",
+  "repository": "https://github.com/alexkrolick/react-lib-quickstart",
+  "description": "Get started building React libraries, quickly",
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "dist/bundle.js",
+  "module": "lib/index.js",
+  "scripts": {
+    "test": "echo \"TODO tests\" && exit 1",
+    "build": "yarn run build-lib && yarn run build-dist",
+    "build-lib": "BABEL_ENV=lib babel ./src --out-dir ./lib",
+    "build-dist": "NODE_ENV=production BABEL_ENV=dist webpack",
+    "watch": "webpack --watch",
+    "prepare": "yarn run build"
+  },
+  "keywords": ["react"],
+  "files": ["dist", "src"],
+  "dependencies": {},
+  "devDependencies": {
+    "camel-case": "^3.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "prettier": "^1.6.1",
+    "webpack": "^3.7.1"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^15.3.1 || ^16.0.0",
+    "react-dom": "^15.3.1 || ^16.0.0"
+  },
+  "prettier": {
+    "semi": false,
+    "trailingComma": "es5"
+  },
+  "babel": {
+    "env": {
+      "dist": {
+        "presets": ["stage-2", "env", "react"]
+      },
+      "lib": {
+        "presets": [
+          "stage-2",
+          [
+            "env",
+            {
+              "modules": false
+            }
+          ],
+          "react"
+        ]
+      }
+    }
+  }
+}
