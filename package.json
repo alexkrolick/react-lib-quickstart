@@ -16,7 +16,6 @@
     "prepare": "yarn run build"
   },
   "keywords": ["react"],
-  "files": ["dist", "src"],
   "dependencies": {},
   "devDependencies": {
     "camel-case": "^3.0.0",
