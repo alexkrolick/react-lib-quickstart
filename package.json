@@ -22,11 +22,15 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "camel-case": "^3.0.0",
+    "eslint": "^4.9.0",
+    "eslint-plugin-jest": "^21.2.0",
+    "eslint-plugin-react": "^7.4.0",
     "jest": "^21.2.1",
     "prettier": "^1.6.1",
     "react": "^16.0.0",
@@ -37,6 +41,24 @@
     "prop-types": "^15.6.0",
     "react": "^15.3.1 || ^16.0.0",
     "react-dom": "^15.3.1 || ^16.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "plugins": [
+      "react",
+      "jest"
+    ],
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "es6": true,
+      "commonjs": true,
+      "node": true,
+      "jest": true
+    }
   },
   "prettier": {
     "semi": false,
