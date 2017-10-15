@@ -8,24 +8,29 @@
   "main": "dist/bundle.js",
   "module": "lib/index.js",
   "scripts": {
-    "test": "echo \"TODO tests\" && exit 1",
+    "test": "jest ./src",
     "build": "yarn run build-lib && yarn run build-dist",
     "build-lib": "BABEL_ENV=lib babel ./src --out-dir ./lib",
     "build-dist": "NODE_ENV=production BABEL_ENV=dist webpack",
     "watch": "webpack --watch",
     "prepare": "yarn run build"
   },
-  "keywords": ["react"],
+  "keywords": [
+    "react"
+  ],
   "dependencies": {},
   "devDependencies": {
-    "camel-case": "^3.0.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
+    "camel-case": "^3.0.0",
+    "jest": "^21.2.1",
     "prettier": "^1.6.1",
+    "react": "^16.0.0",
+    "react-test-renderer": "^16.0.0",
     "webpack": "^3.7.1"
   },
   "peerDependencies": {
@@ -39,19 +44,30 @@
   },
   "babel": {
     "env": {
+      "test": {
+        "presets": [
+          "env",
+          "react",
+          "stage-2"
+        ]
+      },
       "dist": {
-        "presets": ["stage-2", "env", "react"]
+        "presets": [
+          "env",
+          "react",
+          "stage-2"
+        ]
       },
       "lib": {
         "presets": [
-          "stage-2",
           [
             "env",
             {
               "modules": false
             }
           ],
-          "react"
+          "react",
+          "stage-2"
         ]
       }
     }
