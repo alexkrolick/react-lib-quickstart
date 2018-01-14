@@ -1,14 +1,14 @@
 const path = require("path")
 const webpack = require("webpack")
 const camelCase = require("camel-case")
-const package = require("./package.json")
+const pkg = require("./package.json")
 
 module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
     path: path.resolve(__dirname, "dist"),
-    library: camelCase(package.name),
+    library: camelCase(pkg.name),
     libraryTarget: "umd2",
   },
   module: {
