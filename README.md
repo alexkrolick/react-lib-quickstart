@@ -11,6 +11,10 @@ Get started building React libraries, quickly.
   
 _Note: This is for libraries, not for apps! If you are bootstrapping an app check out [create-react-app](https://github.com/facebookincubator/create-react-app)_.
 
+## Roadmap
+
+See the [Roadmap](https://github.com/alexkrolick/react-lib-quickstart/projects/3/) for future plans
+
 ## What is included
 
 ### Basics
